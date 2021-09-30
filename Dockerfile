@@ -15,5 +15,5 @@ RUN microdnf update -y \
 
 RUN curl --version \ 
     && wget --version \
-    && unzip --version \
+    && unzip -v \
     && tar --version
