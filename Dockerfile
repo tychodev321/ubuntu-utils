@@ -8,6 +8,7 @@ LABEL maintainer="TychoDev <cloud.ops@tychodev.com>"
 
 RUN microdnf update -y \
     && microdnf install -y unzip \
+    && microdnf install -y gzip \
     && microdnf install -y tar \
     && microdnf install -y wget \
     && microdnf clean all \
@@ -16,7 +17,8 @@ RUN microdnf update -y \
 RUN curl --version \ 
     && wget --version \
     && unzip -v \
-    && tar --version
+    && tar --version \
+    && gzip --version
 
 # USER 1001
 
