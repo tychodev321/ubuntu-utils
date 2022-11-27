@@ -20,6 +20,12 @@ RUN curl --version \
     && tar --version \
     && gzip --version
 
+RUN echo "curl version - $(curl --version)" \
+    && echo "wget version - $(wget --version)" \
+    && echo "unzip version - $(unzip -v)" \
+    && echo "tar version - $(tar --version)" \ 
+    && echo "gzip version - $(gzip --version)"
+
 # USER 1001
 
 CMD ["echo", "This is a 'Purpose Built Image', It is not meant to be ran directly"]
