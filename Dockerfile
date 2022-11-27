@@ -20,6 +20,6 @@ RUN echo "curl version: $(curl --version | head -n 1)" \
     && echo "tar version: $(tar --version | head -n 1)" \ 
     && echo "gzip version: $(gzip --version | head -n 1)"
 
-# USER 1001
+USER 1001
 
 CMD ["echo", "This is a 'Purpose Built Image', It is not meant to be ran directly"]
