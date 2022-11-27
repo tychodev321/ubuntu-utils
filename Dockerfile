@@ -14,11 +14,11 @@ RUN microdnf update -y \
     && microdnf clean all \
     && rm -rf /var/cache/* /var/log/dnf* /var/log/yum.*
 
-RUN echo "curl version: $(curl --version)" \
-    && echo "wget version: $(wget --version)" \
-    && echo "unzip version: $(unzip -v)" \
-    && echo "tar version: $(tar --version)" \ 
-    && echo "gzip version: $(gzip --version)"
+RUN echo "curl version: $(curl --version | head -n 1)" \
+    && echo "wget version: $(wget --version | head -n 1)" \
+    && echo "unzip version: $(unzip -v | head -n 1)" \
+    && echo "tar version: $(tar --version | head -n 1)" \ 
+    && echo "gzip version: $(gzip --version | head -n 1)"
 
 # USER 1001
 
