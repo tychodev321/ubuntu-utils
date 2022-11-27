@@ -14,12 +14,6 @@ RUN microdnf update -y \
     && microdnf clean all \
     && rm -rf /var/cache/* /var/log/dnf* /var/log/yum.*
 
-RUN curl --version \ 
-    && wget --version \
-    && unzip -v \
-    && tar --version \
-    && gzip --version
-
 RUN echo "curl version - $(curl --version)" \
     && echo "wget version - $(wget --version)" \
     && echo "unzip version - $(unzip -v)" \
