@@ -18,7 +18,8 @@ RUN echo "curl version: $(curl --version | head -n 1)" \
     && echo "wget version: $(wget --version | head -n 1)" \
     && echo "unzip version: $(unzip -v | head -n 1)" \
     && echo "tar version: $(tar --version | head -n 1)" \ 
-    && echo "gzip version: $(gzip --version | head -n 1)"
+    && echo "gzip version: $(gzip --version | head -n 1)" \
+    && microdnf repolist
 
 USER 1001
 
