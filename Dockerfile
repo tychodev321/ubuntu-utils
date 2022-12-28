@@ -21,6 +21,6 @@ RUN echo "curl version: $(curl --version | head -n 1)" \
     && echo "gzip version: $(gzip --version | head -n 1)" \
     && microdnf repolist
 
-USER 1001
+# USER 1001
 
 CMD ["echo", "This is a 'Purpose Built Image', It is not meant to be ran directly"]
