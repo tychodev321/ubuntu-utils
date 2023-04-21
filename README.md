@@ -1,1 +1,1 @@
-# ubi-utils
+# ubuntu-utils
